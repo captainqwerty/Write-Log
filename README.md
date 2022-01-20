@@ -14,7 +14,7 @@
   <p align="center">
     A simple project to easily add a log to your projects
     <br />
-    <a href="https://github.com/captainqwerty/Write-Log/releases">Releases</a>
+    <a href="https://github.com/captainqwerty/Write-Log/releases">Releases</a> -
     <a href="https://github.com/captainqwerty/Write-Log/issues">Report Bug</a>
   </p>
 </div>
