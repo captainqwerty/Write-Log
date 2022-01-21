@@ -1,5 +1,5 @@
 class WriteLog {
-    [string]$LogLocation = "$PSScriptRoot\log.log"
+    hidden [string]$LogLocation
     [string]$DateFormat
 
     AddError([string]$Message) {
@@ -16,6 +16,16 @@ class WriteLog {
 
     WriteLog([string]$LogLocation) {
         $this.LogLocation = $LogLocation
+        if(!($this.ValidateLogFile($this.LogLocation))) { throw "Invalid log file extension. Please use .log or .txt" }
+    }
+
+    hidden [bool]ValidateLogFile([string]$logFIle) {
+        $extension = [System.IO.Path]::GetExtension($logFIle)
+        if(($extension -eq ".log") -or ($extension -eq ".txt")) {
+            return $true
+        } else {
+            return $false
+        }
     }
 
     hidden AddEntry([string]$Message,[string]$severity) {
@@ -24,10 +34,12 @@ class WriteLog {
         }
 
         if($null -eq $this.DateFormat) {
-            $this.DateFormat = "dd/MM/yyyy HH:mm:ss"
+            [DateTime]$Date = Get-Date
+            $timeStamp = $date.ToShortDateString() + " " + $date.ToShortTimeString()
+        } else {
+            $timeStamp = Get-date -Format $this.DateFormat
         }
         
-        $timeStamp = Get-date -Format $this.DateFormat
         $Output = "$timeStamp - [$($severity)] $($Message)"
         Add-Content $this.logLocation -value $Output
         Write-Host "$Output"
