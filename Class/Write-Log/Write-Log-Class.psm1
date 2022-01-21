@@ -1,5 +1,6 @@
 class WriteLog {
     [string]$LogLocation = "$PSScriptRoot\log.log"
+    [string]$DateFormat
 
     AddError([string]$Message) {
         $this.AddEntry($message,"Error")
@@ -22,7 +23,11 @@ class WriteLog {
             new-item $this.LogLocation -Force
         }
 
-        $timeStamp = Get-date -Format "dd/MM/yyyy HH:mm:ss"
+        if($null -eq $this.DateFormat) {
+            $this.DateFormat = "dd/MM/yyyy HH:mm:ss"
+        }
+        
+        $timeStamp = Get-date -Format $this.DateFormat
         $Output = "$timeStamp - [$($severity)] $($Message)"
         Add-Content $this.logLocation -value $Output
         Write-Host "$Output"
