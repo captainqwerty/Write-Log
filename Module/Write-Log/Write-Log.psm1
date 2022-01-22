@@ -37,7 +37,7 @@ Function Write-Log {
       [string]$Message,
 
       [Parameter(Position=1, HelpMessage="Enter the log level severity between.")]
-      [ValidateSet("Info", "Warning", "Error")]
+      [ArgumentCompletions('Info', 'Warning', 'Error')]
       [string]$severity = "Info",
 
       [Parameter(Position=2, HelpMessage="Directory for the log file. Extension must be .log or .txt")]
