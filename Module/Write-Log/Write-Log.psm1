@@ -15,17 +15,17 @@ The log message entered into the log file.
 The severity set for the log message within the log file. (Info, Warning, Error).
 
 .PARAMETER logLocation
-The directory of the log file.
+The directory of the log file.  If left blank the log will be located in the Write-Log module folder.
 
 .PARAMETER DateFormat
 String format if a specific date format is desired.
 
 .EXAMPLE
-write-log -Message "Oh no Jurgen was here"
+write-log -Message "Info worthy log"
 .EXAMPLE
-write-log -Message "Oh no Jurgen was here" -severity "Error"
+write-log -Message "Error message!! OH NO!" -severity "Error"
 .EXAMPLE
-write-log -Message "Oh no Jurgen was here" -severity "Error" -LogLocation "C:\temp\ffsJurgen.log"
+write-log -Message "Errorrrr!!!!" -severity "Error" -LogLocation "C:\temp\Events.log"
 
 .NOTES
 This module can be found in the following GitHub Repo: https://github.com/captainqwerty/Write-Log
