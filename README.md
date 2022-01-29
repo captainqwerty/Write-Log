@@ -32,7 +32,7 @@ The class Version is the preferred version however this version is limited to Po
 
 The Module Version is available for those prefering to use *Import-Module* and those using older versions of PowerShell as the Class version will not work on PowerShell versions prior to 5.0.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -44,19 +44,19 @@ The Module Version is available for those prefering to use *Import-Module* and t
 
 ### Installation of Class Version
 
-1. Download the <a href="https://github.com/captainqwerty/Write-Log/release">latest release</a>.
+1. Download the <a href="https://github.com/captainqwerty/Write-Log/releases">latest release</a>.
 2. Extract the zipped folder.
 3. Place the "Write-Log" folder in your project's folder or in a location the script can access under the context it will be ran.
-4. Add the Using satement pointing to the Write-Log-Class.psm1 file, please note using statements must be the very first lines of your script.  In this example the Write-Log folder containing the file is in the root folder with the script calling it.
+4. Add the Using statement pointing to the Write-Log-Class.psm1 file. Please note, using statements must be the very first lines of your script.  In this example the Write-Log folder containing the file is in the root folder with the script calling it.
 ```ps1
 using module ".\Write-Log\Write-Log-Class.psm1"
 ```
-5. See <a href="#usage-of-the-class-version">Class Version Usage</a> section for examples on how to configure the log location and add enteries.
+5. See <a href="#usage-of-the-class-version">Class Version Usage</a> section for examples on how to configure the log location and add entries.
 
 ### Installation of Module Version
 
 1. Download the <a href="https://github.com/captainqwerty/Write-Log/releases">latest release</a>.
-2. Extra the zipped folder.
+2. Extract the zipped folder.
 3. Ensure the Write-log.psm1 remains in a folder called "Write-Log" and place the Write-Log folder in your project's folder or in a location the script can access under the context it will be ran.
 4. Import the Module. In this example the Write-Log folder is in the root of the project folder. 
 ```ps1
@@ -67,13 +67,13 @@ if(!(test-path $module)){
 }
 Import-Module $module
 ```
-5. See <a href="#usage-of-the-module-version">Module Version Usage</a> section for examples on how to configure the log location and add enteries.
+5. See <a href="#usage-of-the-module-version">Module Version Usage</a> section for examples on how to configure the log location and add entries.
 6. Add the Remove-Module line to the bottom of your script.
 ```ps1
 Remove-Module Write-Log
 ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage of the Class Version
@@ -87,7 +87,7 @@ $Log.AddError("There was a huge error!")
 $Log.AddWarning("Oh dear, I should really warn you about this!")
 $Log.AddEntry("Testing","Test Severity") #This method is hidden but can be used for custom severities
 ```
-The below example shows having mutliple Write-Log objects to store different types or log enteries in different logs.
+The below example shows having mutliple Write-Log objects to store different types or log entries in different logs.
 
 ```ps1
 using module ".\Class\Write-Log\Write-Log-Class.psm1"
@@ -118,7 +118,7 @@ write-log "This is an example Warning" -severity "Warning" -logLocation $logLoca
 
 Remove-Module Write-Log
 ```
-Below is an example of having seperate logs for Info, Error and Warning enteries.
+Below is an example of having seperate logs for Info, Error and Warning entries.
 ```ps1
 $module = "$PSScriptRoot\Module\Write-Log"
 if(!(test-path $module)){
@@ -137,7 +137,7 @@ write-log "This is an example Warning" -severity "Warning" -logLocation $Warning
 
 Remove-Module Write-Log
 ```
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -153,7 +153,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -162,7 +162,7 @@ Don't forget to give the project a star! Thanks again!
 * [matthewjdegarmo](https://github.com/matthewjdegarmo) - Excellent suggestion on moving from ValidationSet in the module version and improvements / corrections to the ReadMe
 * [SeidChr](https://github.com/SeidChr) - For prompting the addition of .txt
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
