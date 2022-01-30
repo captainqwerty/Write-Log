@@ -161,6 +161,7 @@ Don't forget to give the project a star! Thanks again!
 * [Othneildrew's Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [matthewjdegarmo](https://github.com/matthewjdegarmo) - Excellent suggestion on moving from ValidationSet in the module version and improvements / corrections to the ReadMe
 * [SeidChr](https://github.com/SeidChr) - For prompting the addition of .txt
+* [sean2390](https://github.com/sean2390) - Further spelling and grammar corrections in the ReadMe.
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
