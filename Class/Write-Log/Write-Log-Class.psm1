@@ -35,7 +35,7 @@ class WriteLog {
 
         if($null -eq $this.DateFormat) {
             [DateTime]$Date = Get-Date
-            $timeStamp = $date.ToShortDateString() + " " + $date.ToShortTimeString()
+            $timeStamp = $date.ToShortDateString() + " " + $date.ToLongTimeString()
         } else {
             $timeStamp = Get-date -Format $this.DateFormat
         }
